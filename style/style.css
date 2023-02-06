@@ -34,7 +34,8 @@ li {
   color: #f9f8ff;
 }
 
-header {
+header,
+footer {
   background-color: white;
   padding: 20px 50px;
 }
@@ -45,7 +46,6 @@ header {
   color: white;
   border-radius: 50px;
   padding: 20px 30px;
-  margin-top: 20px;
 }
 
 a:hover {
@@ -57,10 +57,19 @@ a:hover {
   text-decoration: none;
 }
 
+.lien-icone {
+  margin-left: 30px;
+}
+
+.lien-icone:hover {
+  opacity: 0.5;
+}
+
 section {
   padding: 80px;
 }
 
+footer,
 nav {
   display: flex;
   flex-direction: row;
@@ -78,8 +87,13 @@ nav a {
     align-items: center;
     justify-content: center;
   }
-  
-  header {
+
+  header nav img {
+    margin-bottom: 20px;
+  }
+
+  header,
+  footer {
     padding: 20px 20px;
   }
 
@@ -90,7 +104,7 @@ nav a {
   section {
     padding: 50px 20px 50px 20px;
   }
-  
+
   nav a {
     margin-left: 10px;
     margin-right: 10px;
