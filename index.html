@@ -51,8 +51,8 @@
                 <form method="get" action="">
                     <div class="form-nom-email">
                         <div class="form-column">
-                            <label for="nom">nom</label>
-                            <input type="text" name="nom" id="nom" />
+                            <label for="telephone">téléphone</label>
+                            <input type="phone" name="telephone" id="telephone" />
                         </div>
                         <div class="form-column">
                             <label for="email">email</label>
@@ -61,10 +61,23 @@
                     </div>
                     <label for="message">message</label>
                     <textarea name="message" id="message" rows="10"></textarea>
-                    <input type="submit" value="ENVOYER" class="cta" />
+                    <input type="button" value="ENVOYER" class="cta" onclick="sendMail()" />
                 </form>
             </section>  
         </main> 
+        <script>
+            function sendMail() {
+                var phone = document.getElementById('telephone')
+                var mail = document.getElementById('email')
+                var message = document.getElementById('message')
+    
+                if (message.value !== '') {
+                    if (phone.value !== '' && mail.value !== '') {
+                        console.log("Send mail")
+                    }
+                }
+            }
+        </script>
         <footer>
             <a href="index.html" class="lien-icone">
                 <img src="images/logo.png" alt="Logo Robbie Lens" />
